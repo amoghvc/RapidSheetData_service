@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "ww-rsd-service",
+  "private_key_id": "24456c400ad7a3b83050a74d104ce6f9bfdadef4",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDl9690zAN4Ajcp\nK/X+wLdeaBPDV1WCYc4EieOSOXlW8jqcn7JoqVquty6tYtoQ7pQKRTGf7SmgClnI\nXaXh5qAQgBQn16OcMOtZznJsMdWel+NRwgKhDPfVlSR0/n/wWK0DKyvF7TAlyWDW\nBEojj8n4XUXomP3NSFtFXWRXY3RQ3yqk2TUvfZPLg20qJGMQN4lF/b1RxAnaJlbY\nrD7TNZQdLlpPVqbUeqcpWK7UBrnRBOuBRz1Jo8reLNg3+TXeWk4ajyHmPcwCisF5\nsW75nVLCxYq3Iu36G2cOcvwUDWye77TAdoKZD0BmvSkQuGW86quUV/HF3K74LJOi\npRNB1QmFAgMBAAECggEAM+corxRCrinV2FGHNmW5nTGhUEPcVU6MyIJ0nfKh28lV\nCDeU9UFP6cIHY3O9ovet6vl9/0nwTKI5bFsSjv9V3hOCORHW5/A0ljLdqWTAAYjn\ncfL3U/EQ2KBON6efKZhiCCaMvSHQ7Z5bYEJcl1UjMQ6gMiShl9z+WJQBCyYzwPKH\n03JbTMwgkQhYlAbaFZU40VER8YXSqKfUsx0DEuMPm7Pt0eKla8ZuL1I/iRQhbG8L\nRRT4UYPpT1EabS23H6G+bE/5Wt6rHBB9sfQYLOr2q4SANxTdEW8hzndeVG+suWGU\nQn4loaF5iNlLiI/FwwBrMaY4YAoPpsWdWbwHQAzCUQKBgQD9tLlulk/QzubtDfoc\n66LI2EqDkLunsjCtSssH0jdUPvxg8STxsKGx6VCvCnO8QP3YHwhjDXmYLcP5H6uf\n5JOoYVPtPSWWSd5ogD0uSRmjX2Nc3prdKeP19eJEjZd0nT37MqSGh5w+D4hHAXUK\nAt1MLe0AGN2L9ubPJXep070mqQKBgQDoDAL2rxClBDpgCIOT0aO09AGWmNuoi4UJ\nuQyKUGNFnADHIwwaMI/uScsvG77+fMhVXY0VOhwlxiG50aTRV5eWiRWV5TGMScRH\nas2Ho+vE8dhXGKCjrWq6RO3rflxnONI5sg34KRs9xKJwnPgv+CXBUr/jNglT0HPu\ntmxVIs6BfQKBgQDGF61NtpmdfV97qpUmranNzmvn7ENJfe1Z8XMzqSTAZ+mhO8hP\n2k12X6k68xtI2yoY7KocxTGy69D/nIXh85SDPXNNYpgNj6HT0IV0tWkKUfmAUuNy\nWjn/GzzPsAqY6Am0MGecDxiksHYEkxOyfGgUCivqDoA1v9OZ3DRh6sze+QKBgQCr\nOnHVZkl5+yy4QJAXO9L5bDTf09wC+zEog4xlY/xdGUjZqVr82GjdBUcRc//z+lA5\n7dZ1m3O5zAKHA9QDRgdt5aov+fgd9TEJIh6XwLXxliR14I5pOUZQPRzzcULuSFeY\ni3MTdAHOCpNzVeEuRIZXqaA/IViwqFlkBOjbydtoYQKBgCbuh7yth6XoA7L6QkJ7\nqqLLeraowDEYQTn15ZSopZ+LzOx1l1K1zZzxmrS8fQiFBd1yoaPdM2IH+I6pknxu\n44jcN4jWxEFIzeJ7duTHtBBXBggAHGyl5s2hXQIJjn7zIDA2uCTIRCjwldtmf7je\nZTu+gG5Dboi9M2HUyF2umfw+\n-----END PRIVATE KEY-----\n",
+  "client_email": "rsd-agent@ww-rsd-service.iam.gserviceaccount.com",
+  "client_id": "109015677302619426501",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/rsd-agent%40ww-rsd-service.iam.gserviceaccount.com"
+}
