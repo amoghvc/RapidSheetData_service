@@ -40,47 +40,60 @@ var exports = module.exports = {};
  * getSheetsAsJson(spreadsheetId, sheetName, callback)
  * Returns sheet data from the target spreadsheet as JSON
  */
-exports.getSheetsAsJson = function (spreadsheetId, requestData, callback) {
-
-  console.log("[rsdModule] getSheetsAsJson : spreadsheet id = '%s', sheets = '%s', dimension = '%s'", 
-    spreadsheetId, requestData);
+exports.getSheetsAsJson = function (spreadsheetId, requestData, callback) 
+{
+  console.log (
+      "[rsdModule] getSheetsAsJson : spreadsheet id = '%s', sheets = '%s', dimension = '%s'", 
+      spreadsheetId, requestData
+    );
 
     //
-    authorize(CLIENT_SECRET, function(authClient) {
+  authorize (
+    CLIENT_SECRET, 
+    function (authClient) 
+    {
       var data = { };
-      var requests = createRequests(authClient, spreadsheetId, requestData); // 0: ROWS, 1: COLUMNS
-      var sheetsApi = google.sheets('v4');
+      var requests = createRequests (authClient, spreadsheetId, requestData); // 0: ROWS, 1: COLUMNS
+      var sheetsApi = google.sheets ('v4');
 
       // Sends a request to Google sheets and removes it from the queue
-      var executeRequest = function() {
-        if(requests.length > 0) {
-          sheetsApi.spreadsheets.values.batchGet(requests[requests.length - 1], processResponse);
-          requests.pop();
-        } else {
-          callback(true, JSON.stringify(data));
+      var executeRequest = function() 
+      {
+        if (requests.length > 0) 
+        {
+          sheetsApi.spreadsheets.values.batchGet ( requests[requests.length - 1], processResponse );
+          requests.pop ();
+        } 
+        else 
+        {
+          callback ( true, JSON.stringify (data) );
         }
       };
 
       // Processes a Google sheet response
-      var processResponse = function(err, response) {
+      var processResponse = function (err, response) 
+      {
         // Handle error(s)
-        if (err) {
-          console.log("[rsdModule] processResponse : The API returned an error: '%s'", err);
-          callback(false, err);
+        if (err) 
+        {
+          console.log ("[rsdModule] processResponse : The API returned an error: '%s'", err);
+          callback (false, err);
           return;
         }
 
         // Add sheet(s) to data
-        for(var i = 0; i < response.valueRanges.length; ++i) {
-          var sheetName = response.valueRanges[i].range.match(/(?:'[^']*'|^[^']*$)/)[0].replace(/'/g, "");
-          data[sheetName] = parseRowsToList(response.valueRanges[i].values);
+        for (var i = 0; i < response.valueRanges.length; ++i) 
+        {
+          var sheetName = response.valueRanges[i].range.match (/.+?(?=!|$)/)[0].replace(/'/g, ""); // (?:'[^']*'|^[^']*$)
+          data[sheetName] = parseRowsToList (response.valueRanges[i].values);
         }
 
         executeRequest();
       };
 
       executeRequest();
-    });
+    }
+  );
 };
 
 
@@ -95,7 +108,8 @@ exports.getSheetsAsJson = function (spreadsheetId, requestData, callback) {
  * @param {*} spreadsheetId 
  * @param {*} sheets
  */
-function createRequests(authClient, spreadsheetId, requestData) {
+function createRequests (authClient, spreadsheetId, requestData) 
+{
   var requests = []; // 0: ROWS, 1: COLUMNS
   var getSheetsRowMajor = [];
   var getSheetsColumnMajor = [];
